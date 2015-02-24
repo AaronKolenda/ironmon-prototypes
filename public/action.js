@@ -19,7 +19,13 @@ var Action = function(){ }
 Action.prototype.use = function(opponent) {
   var damage = Math.ceil(Math.random() * this.power)
 
-  opponent.health = opponent.health - damage
+  if (this.type === "water" && opponent.type === "fire") {damage = damage*2};
+  if (this.type === "fire" && opponent.type === "grass") {damage = damage*2};
+  if (this.type === "grass" && opponent.type === "water") {damage = damage*2};
 
-  return damage
+
+  opponent.health = opponent.health - damage;
+
+
+  return damage;
 }

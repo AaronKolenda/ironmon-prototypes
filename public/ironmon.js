@@ -9,7 +9,13 @@
   It also contains a property passed in as a parameter:
     - name
 */
-var Ironmon = function(name) {
+var Ironmon = function(name, type) {
+  this.health = 25;
+  this.power = 1;
+  this.charged = false;
+
+  this.name = name;
+  this.type = type;
 
 }
 
@@ -23,13 +29,20 @@ var Ironmon = function(name) {
 */
 Ironmon.prototype.heal = function() {
 
+  healthAdd = _.sample([1, 2, 3, 4, 5]);
+  this.health = this.health + healthAdd;
+
+  if (this.health > 25) {
+    this.health = 25;
+  }
+
 }
 
 /*
   This function adds one to the power of the Ironmon.
 */
 Ironmon.prototype.train = function() {
-
+  this.power = this.power + 1;
 }
 
 /*
@@ -38,7 +51,10 @@ Ironmon.prototype.train = function() {
   Otherwise, it returns false.
 */
 Ironmon.prototype.active = function() {
-
+  if (this.health > 0) {
+    return true;
+  }
+  return false;
 }
 
 /*
@@ -50,7 +66,15 @@ Ironmon.prototype.active = function() {
     *within the context of this Ironmon*,
     passing in the opponent Ironmon as a parameter.
 */
-Ironmon.prototype.action = function(opponent, action) {
 
+Ironmon.prototype.action = function(opponent, act) {
+
+    var attackReturn = act.use.call(this, opponent);
+    return attackReturn;
+
+    console.log("act is ", act);
+    console.log("opp is ", opponent);
+    console.log("this is ", this);
+    console.log("act.use is ", act.use);
 }
 
