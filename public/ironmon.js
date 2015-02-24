@@ -69,6 +69,25 @@ Ironmon.prototype.active = function() {
 
 Ironmon.prototype.action = function(opponent, act) {
 
+  var doubler = function() {
+    var returnOne = act.use.call(this, opponent);
+    var returnTwo = act.use.call(this, opponent);
+    var attackReturn = returnOne + returnTwo;
+    return attackReturn;
+  }
+
+  if (this.type === "water" && opponent.type === "fire") {
+    return doubler();
+  };
+
+  if (this.type === "fire" && opponent.type === "grass") {
+    return doubler();
+  };
+
+  if (this.type === "grass" && opponent.type === "water") {
+    return doubler();
+  };
+
     var attackReturn = act.use.call(this, opponent);
     return attackReturn;
 
