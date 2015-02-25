@@ -12,6 +12,10 @@
 */
 var Game = function(leftName, rightName) {
 	this.turn = true;
+
+	this.leftCreated = false;
+	this.rightCreated = false;
+
 	
 
 	this.left = new Ironmon(leftName);
