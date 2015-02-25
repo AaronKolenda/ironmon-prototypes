@@ -2,11 +2,42 @@
 	margin: 0px;
 }
 
+h2 {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.infoWrap {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	float: right;
+	box-sizing: border-box;
+	height: 200px;
+	width:80%;
+	outline: 1px solid black;
+	font-size: 20px;
+}
+
 .instructions {
 	height: 200px;
 	outline: 1px solid black;
 	text-align: center;
 	padding-top: 50px;
+}
+
+.leftPlayer {
+	display: inline-block;
+	width: 49%;
+	height: 300px;
+	outline: 1px solid black;
+	margin-top: 20px;
+}
+
+.moveWrap {
+	margin-top: 20px;
+outline: 1px solid black;
+text-align: center;
 }
 
 .playerOne {
@@ -26,6 +57,14 @@
 	padding: 20px;
 	box-sizing: border-box;
 	text-align: center;
+	margin-top: 20px;
+}
+
+.rightPlayer {
+	display: inline-block;
+	width: 49%;
+	height: 300px;
+	outline: 1px solid black;
 	margin-top: 20px;
 
 }

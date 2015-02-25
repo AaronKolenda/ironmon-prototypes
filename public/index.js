@@ -2,15 +2,18 @@ $(document).ready(function(){
 
 	getTemplates();
 
+
 	$("#createOne").click(function(){
 		var nameOne = $("#nameOne").val();
 		var typeOne	= $("#typeOne").val();
 
-		var playerOne = new Ironmon(nameOne, typeOne);
+		
+		playerOne = new Ironmon(nameOne, typeOne);
 		console.log(playerOne);
+		
 
 		var playerOneString = templates.playerOneInfo(playerOne);
-      	$("#leftPlayer").prepend(playerOneString);
+      	$("#leftWrap").append(playerOneString);
 
 	});
 
@@ -18,16 +21,84 @@ $(document).ready(function(){
 		var nameTwo = $("#nameTwo").val();
 		var typeTwo	= $("#typeTwo").val();
 
-		var playerTwo = new Ironmon(nameTwo, typeTwo);		
+		playerTwo = new Ironmon(nameTwo, typeTwo);		
 		console.log(playerTwo);
 
 		var playerTwoString = templates.playerTwoInfo(playerTwo);
-      	$("#rightPlayer").prepend(playerTwoString);
+      	$("#rightWrap").append(playerTwoString);
 	});
+
+	$("#oneGo").click(function(){
+
+		var move = $("#moveOne").val();
+
+		if (move === "simple") {var action = new Simple();}
+		if (move === "charge") {var action = new Charge();}
+		if (move === "elixir") {var action = new Elixir();}
+		if (move === "feedback") {var action = new Feedback();}
+		if (move === "leech") {var action = new Leech();}
+		if (move === "heal") {
+			playerOne.heal();
+			var playerOneString = templates.playerOneInfo(playerOne);
+      		$("#leftWrap").html(playerOneString);
+      		return;
+		}
+		if (move === "train") {
+			playerOne.train();
+			var playerOneString = templates.playerOneInfo(playerOne);
+      		$("#leftWrap").html(playerOneString);
+      		return;
+		}
+
+		playerOne.action(playerTwo, action);
+
+		var playerOneString = templates.playerOneInfo(playerOne);
+      	$("#leftWrap").html(playerOneString);
+
+		var playerTwoString = templates.playerTwoInfo(playerTwo);
+      	$("#rightWrap").html(playerTwoString);
+	});
+
+
+	$("#twoGo").click(function(){
+
+		var move = $("#moveTwo").val();
+
+		if (move === "simple") {var action = new Simple();}
+		if (move === "charge") {var action = new Charge();}
+		if (move === "elixir") {var action = new Elixir();}
+		if (move === "feedback") {var action = new Feedback();}
+		if (move === "leech") {var action = new Leech();}
+		if (move === "heal") {
+			playerTwo.heal();
+			var playerTwoString = templates.playerTwoInfo(playerTwo);
+      		$("#rightWrap").html(playerTwoString);
+      		return;
+		}
+		if (move === "train") {
+			playerTwo.train();
+			var playerTwoString = templates.playerTwoInfo(playerTwo);
+      		$("#rightWrap").html(playerTwoString);
+      		return;
+		}
+
+		playerTwo.action(playerOne, action);
+
+		var playerTwoString = templates.playerTwoInfo(playerTwo);
+      	$("#rightWrap").html(playerTwoString);
+
+		var playerOneString = templates.playerOneInfo(playerOne);
+      	$("#leftWrap").html(playerOneString);
+	});
+
+
+
 
 });
 
 var templates = {};
+
+var playerOne, playerTwo;
 
 var getTemplates = function(){
 

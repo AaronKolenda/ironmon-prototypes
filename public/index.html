@@ -53,40 +53,54 @@
 			<div class="leftPlayer" id="leftPlayer">
 
 				<script type="x-handlebars-template" id="playerOne-template">
+
+				<div class="infoWrap" id="infoWrapOne">
+
+				  <h2>Stats</h2>
               
 	              <div class="nameWrap">
-	              {{name}}
+	              name: {{name}}
 	              </div>
 
 	              <div class="typeWrap">
-	              {{type}}
+	              type: {{type}}
 	              </div>
 
 	              <div class="healthWrap">
-	              {{health}}
+	              health: {{health}}
 	              </div>
 
 	              <div class="powerWrap">
-	              {{power}}
+	              power: {{power}}
 	              </div>
 
 	              <div class="chargeWrap">
-	              {{charge}}
+	              charge: {{charge}}
 	              </div>
+
+	            </div>
 
               	</script>
 
-              	<p>Choose Move:</p>
+              	
+              	<div class="moveWrap">
+	              	<p>Choose Move:</p>
 
-              	<select class="move" id="move">
-					<option value="heal">Heal</option>
-					<option value="train">Train</option>
-					<option value="grass">Simple</option>
-					<option value="grass">Charge</option>
-					<option value="grass">Elixir</option>
-					<option value="grass">Feedback</option>
-					<option value="grass">Leech</option>
-				</select>
+	              	<select class="move" id="moveOne">
+						<option value="heal">Heal</option>
+						<option value="train">Train</option>
+						<option value="simple">Simple</option>
+						<option value="charge">Charge</option>
+						<option value="elixir">Elixir</option>
+						<option value="feedback">Feedback</option>
+						<option value="leech">Leech</option>
+					</select>
+
+					<button id="oneGo">Go</button>
+				</div>
+
+				<div id="leftWrap">
+				</div>
     
 			</div>
 
@@ -94,41 +108,57 @@
 
 			<div class="rightPlayer" id="rightPlayer">
 
+
 				<script type="x-handlebars-template" id="playerTwo-template">
               
+              	  <div class="infoWrap" id="infoWrapTwo">
+              	
+              	  <h2>Stats</h2>
+
 	              <div class="nameWrap">
-	              {{name}}
+	              name: {{name}}
 	              </div>
 
 	              <div class="typeWrap">
-	              {{type}}
+	              type: {{type}}
 	              </div>
 
 	              <div class="healthWrap">
-	              {{health}}
+	              health: {{health}}
 	              </div>
 
 	              <div class="powerWrap">
-	              {{power}}
+	              power: {{power}}
 	              </div>
 
 	              <div class="chargeWrap">
-	              {{charge}}
+	              charge: {{charge}}
 	              </div>
+
+	            </div>
 
               	</script>
 
-              	<p>Choose Move:</p>
+              	
 
-              	<select class="move" id="move">
-					<option value="heal">Heal</option>
-					<option value="train">Train</option>
-					<option value="grass">Simple</option>
-					<option value="grass">Charge</option>
-					<option value="grass">Elixir</option>
-					<option value="grass">Feedback</option>
-					<option value="grass">Leech</option>
-				</select>
+              	<div class="moveWrap">
+	              	<p>Choose Move:</p>
+
+	              	<select class="move" id="moveTwo">
+						<option value="heal">Heal</option>
+						<option value="train">Train</option>
+						<option value="simple">Simple</option>
+						<option value="charge">Charge</option>
+						<option value="elixir">Elixir</option>
+						<option value="feedback">Feedback</option>
+						<option value="leech">Leech</option>
+					</select>
+
+					<button id="twoGo">Go</button>
+				</div>
+
+				<div id="rightWrap">
+				</div>
 
 			</div>
 
