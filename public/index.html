@@ -50,10 +50,86 @@
 			</div>
 
 
-			<div class="leftPlayer">
+			<div class="leftPlayer" id="leftPlayer">
+
+				<script type="x-handlebars-template" id="playerOne-template">
+              
+	              <div class="nameWrap">
+	              {{name}}
+	              </div>
+
+	              <div class="typeWrap">
+	              {{type}}
+	              </div>
+
+	              <div class="healthWrap">
+	              {{health}}
+	              </div>
+
+	              <div class="powerWrap">
+	              {{power}}
+	              </div>
+
+	              <div class="chargeWrap">
+	              {{charge}}
+	              </div>
+
+              	</script>
+
+              	<p>Choose Move:</p>
+
+              	<select class="move" id="move">
+					<option value="heal">Heal</option>
+					<option value="train">Train</option>
+					<option value="grass">Simple</option>
+					<option value="grass">Charge</option>
+					<option value="grass">Elixir</option>
+					<option value="grass">Feedback</option>
+					<option value="grass">Leech</option>
+				</select>
+    
 			</div>
 
-			<div class="rightPlayer">
+		
+
+			<div class="rightPlayer" id="rightPlayer">
+
+				<script type="x-handlebars-template" id="playerTwo-template">
+              
+	              <div class="nameWrap">
+	              {{name}}
+	              </div>
+
+	              <div class="typeWrap">
+	              {{type}}
+	              </div>
+
+	              <div class="healthWrap">
+	              {{health}}
+	              </div>
+
+	              <div class="powerWrap">
+	              {{power}}
+	              </div>
+
+	              <div class="chargeWrap">
+	              {{charge}}
+	              </div>
+
+              	</script>
+
+              	<p>Choose Move:</p>
+
+              	<select class="move" id="move">
+					<option value="heal">Heal</option>
+					<option value="train">Train</option>
+					<option value="grass">Simple</option>
+					<option value="grass">Charge</option>
+					<option value="grass">Elixir</option>
+					<option value="grass">Feedback</option>
+					<option value="grass">Leech</option>
+				</select>
+
 			</div>
 
 
