@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Ironmon Game</title>
+			<link rel="stylesheet" href="style.css">
+			<script src="libs/jquery.js"></script>
+    		<script src="libs/underscore.js"></script>
+    		<script src="libs/handlebars.js"></script>
+    		<script src="ironmon.js"></script>
+	    	<script src="game.js"></script>
+		    <script src="action.js"></script>
+		    <script src="simple.js"></script>
+		    <script src="charge.js"></script>
+		    <script src="leech.js"></script>
+		    <script src="elixir.js"></script>
+		    <script src="feedback.js"></script>
+    		<script src="index.js"></script>
+		</head>
+
+		<body>
+			<div class="instructions">
+				<h2>Enter names and types to create Ironmon. Then battle each other</h2>
+				<div class="playerOne" id="playerOne">
+
+					<input type="text" value="name" id="nameOne">
+
+					<select class="type" id="typeOne">
+						<option value="fire">Fire</option>
+						<option value="water">Water</option>
+						<option value="grass">Grass</option>
+					</select>
+
+					<button id="createOne">Create Player One's Ironmon</button>
+
+				</div>
+
+				<div class="playerTwo" id="playerTwo">
+
+					<input type="text" value="name" id="nameTwo">
+
+					<select class="type" id="typeTwo">
+						<option value="fire">Fire</option>
+						<option value="water">Water</option>
+						<option value="grass">Grass</option>
+					</select>
+
+					<button id="createTwo">Create Player Two's Ironmon</button>
+					
+				</div>
+			</div>
+
+
+			<div class="leftPlayer">
+			</div>
+
+			<div class="rightPlayer">
+			</div>
+
+
+
+
+
+
+
+
+
+
+
+
+		</body>
+	</html>

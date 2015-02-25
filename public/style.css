@@ -1,0 +1,31 @@
+* {
+	margin: 0px;
+}
+
+.instructions {
+	height: 200px;
+	outline: 1px solid black;
+	text-align: center;
+	padding-top: 50px;
+}
+
+.playerOne {
+	width: 49%;
+	display: inline-block;
+	outline: 1px solid black;
+	padding: 20px;
+	box-sizing: border-box;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.playerTwo {
+	width: 49%;
+	display: inline-block;
+	outline: 1px solid black;
+	padding: 20px;
+	box-sizing: border-box;
+	text-align: center;
+	margin-top: 20px;
+
+}
