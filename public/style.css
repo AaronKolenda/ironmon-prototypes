@@ -15,6 +15,10 @@ button {
 	font-size: 12px;
 }
 
+.create {
+	margin-top: 5px;
+}
+
 .gwrap {
 	margin-top: 10px;
 }
@@ -39,14 +43,16 @@ input {
 	margin-right: 10px;
 	color: rgb(204, 204, 204);
 	padding-left: 5px;
-
 }
 
 .instructions {
 	height: 200px;
-	outline: 1px solid black;
+	border-bottom: 1px solid grey;
 	text-align: center;
 	padding-top: 50px;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .leftPlayer {

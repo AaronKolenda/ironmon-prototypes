@@ -144,6 +144,16 @@ $(document).ready(function(){
       	currentGame.takeTurn();
 	});
 
+	$("#nameOne").click(function(){
+		$("#nameOne").val(" ");
+		$("#nameOne").css("color", "black");
+	});
+
+	$("#nameTwo").click(function(){
+		$("#nameTwo").val(" ");
+		$("#nameTwo").css("color", "black");
+	});
+
 
 
 
